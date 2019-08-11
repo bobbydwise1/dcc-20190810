@@ -8,9 +8,19 @@ Run-length encoding is a fast and simple method of encoding strings. The basic i
 Implement run-length encoding and decoding. You can assume the string to be encoded have no digits and consists solely of alphabetic characters. You can assume the string to be decoded is valid.
 */
 
-
+const makeCode = (yourString) => {
+  
+}
 
 $(document).ready(function() {
+
+  $('#form1').submit(function(event) {
+  event.preventDefault();
+  let input1 = $('#input1').val();
+
+  console.log(input1)
+
   $('#output-section-1').text(1);
+  })
 
 });
