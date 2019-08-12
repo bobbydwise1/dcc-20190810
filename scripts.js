@@ -9,8 +9,22 @@ Implement run-length encoding and decoding. You can assume the string to be enco
 */
 
 const makeCode = (yourString) => {
-  
+  let answer = '';
+  let counter = 1;
+  for (i=0; i<yourString.length; i++) {
+    if (yourString[i] === yourString[i+1]) {
+      counter++;
+    } else {
+      answer = answer+counter+yourString[i];
+      counter = 1;
+    }
+  }
+  return answer;
 }
+
+// let test1 = 'AAAABBBCCDAA';
+// let result1 = '4A3B2C1D2A';
+// console.log(makeCode(test1))
 
 $(document).ready(function() {
 
@@ -20,7 +34,7 @@ $(document).ready(function() {
 
   console.log(input1)
 
-  $('#output-section-1').text(1);
+  $('#output-section-1').text(makeCode(input1));
   })
 
 });
